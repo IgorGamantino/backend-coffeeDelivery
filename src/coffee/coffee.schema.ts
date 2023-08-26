@@ -18,14 +18,8 @@ export const CoffeeSchema = new mongoose.Schema({
     required: true,
   },
   type: {
-    type: [
-      {
-        name: {
-          type: String,
-          required: true,
-        },
-      },
-    ],
+    type: [String],
+    required: true,
   },
   image: {
     type: String,
