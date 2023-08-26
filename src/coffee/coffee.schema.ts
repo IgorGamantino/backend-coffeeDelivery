@@ -18,9 +18,14 @@ export const CoffeeSchema = new mongoose.Schema({
     required: true,
   },
   type: {
-    type: String,
-    enum: ['traditional', 'milk', 'especial', 'alcoholic'],
-    required: true,
+    type: [
+      {
+        name: {
+          type: String,
+          required: true,
+        },
+      },
+    ],
   },
   image: {
     type: String,
